@@ -23,14 +23,29 @@ export function DisclaimerProvider({ children }: { children: React.ReactNode }) 
   const [showDisclaimer, setShowDisclaimer] = useState(false)
 
   useEffect(() => {
-    const hasSeenDisclaimer = localStorage.getItem('disclaimer-seen')
-    if (!hasSeenDisclaimer) {
+    // Detect if this is a full reload or direct visit
+    let isFullReload = false
+    if (typeof window !== 'undefined') {
+      // For modern browsers
+      const navEntries = window.performance.getEntriesByType?.('navigation')
+      if (navEntries && navEntries.length > 0) {
+        const navType = navEntries[0].type
+        isFullReload = navType === 'reload' || navType === 'navigate'
+      } else if (window.performance && (window.performance as any).navigation) {
+        // For older browsers
+        const navType = (window.performance as any).navigation.type
+        isFullReload = navType === 1 || navType === 0 // 1: reload, 0: navigate
+      } else {
+        // Fallback: always show
+        isFullReload = true
+      }
+    }
+    if (isFullReload) {
       setShowDisclaimer(true)
     }
   }, [])
 
   const handleAccept = () => {
-    localStorage.setItem('disclaimer-seen', 'true')
     setShowDisclaimer(false)
   }
 
