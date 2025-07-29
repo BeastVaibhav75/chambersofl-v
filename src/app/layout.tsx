@@ -4,6 +4,7 @@ import './globals.css'
 import { DisclaimerProvider } from '../components/DisclaimerProvider'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import StickyWhatsAppButton from '../components/StickyWhatsAppButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,8 @@ export default function RootLayout({
             <Footer />
           </div>
         </DisclaimerProvider>
+        {/* Sticky WhatsApp Button */}
+        <StickyWhatsAppButton />
       </body>
     </html>
   )
