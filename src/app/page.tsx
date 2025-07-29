@@ -330,14 +330,14 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="tel:+919876543210"
+                href="tel:+918112236676"
                 className="flex items-center space-x-2 bg-white text-primary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 <Phone size={20} />
                 <span>Call Now</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918112236676"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
@@ -405,7 +405,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Contact</h3>
                   <p className="text-gray-600">
-                    Phone: +91 98765 43210<br />
+                    Phone: +91 8112236676<br />
                     Email: info@chambersoflv.com
                   </p>
                 </div>
@@ -430,4 +430,4 @@ export default function Home() {
       </section>
     </div>
   )
-} 
+}

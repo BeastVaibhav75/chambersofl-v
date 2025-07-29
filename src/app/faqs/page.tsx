@@ -176,7 +176,7 @@ export default function FAQsPage() {
                   Contact Us
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+918112236676"
                   className="btn-secondary"
                 >
                   Call Now
@@ -221,4 +221,4 @@ export default function FAQsPage() {
       </section>
     </div>
   )
-} 
+}

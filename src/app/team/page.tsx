@@ -26,7 +26,7 @@ const teamMembers = [
     description: 'Specializes in corporate law, mergers & acquisitions, and business formation. Has extensive experience in handling complex corporate transactions and providing strategic legal advice to businesses of all sizes.',
     contact: {
       email: 'partner.l@chambersoflv.com',
-      phone: '+91 98765 43210'
+      phone: '+91 8112236676'
     }
   },
   {
@@ -44,7 +44,7 @@ const teamMembers = [
     description: 'Expert in civil litigation, criminal defense, and dispute resolution. Known for strategic approach to complex legal disputes and successful representation in high-stakes cases.',
     contact: {
       email: 'partner.v@chambersoflv.com',
-      phone: '+91 98765 43211'
+      phone: '+91 9306357991'
     }
   },
   {
@@ -62,7 +62,7 @@ const teamMembers = [
     description: 'Specializes in IP law, trademark registration, and technology law. Provides comprehensive legal services for startups and technology companies.',
     contact: {
       email: 'associate.a@chambersoflv.com',
-      phone: '+91 98765 43212'
+      phone: '+91 8112236676'
     }
   }
 ]
@@ -316,4 +316,4 @@ export default function TeamPage() {
       </section>
     </div>
   )
-} 
+}

@@ -83,10 +83,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-primary-400 flex-shrink-0" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+918112236676"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  +91 98765 43210
+                  +91 8112236676
                 </a>
               </div>
               
@@ -158,4 +158,4 @@ export default function Footer() {
       </div>
     </footer>
   )
-} 
+}

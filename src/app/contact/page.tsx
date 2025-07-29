@@ -300,10 +300,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+918112236676"
                       className="text-gray-600 hover:text-primary-600 transition-colors"
                     >
-                      +91 98765 43210
+                      +91 8112236676
                     </a>
                   </div>
                 </div>
@@ -343,14 +343,14 @@ export default function ContactPage() {
                 <h3 className="font-semibold text-gray-900 mb-4">Quick Contact</h3>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918112236676"
                     className="flex items-center justify-center space-x-2 bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors"
                   >
                     <Phone size={20} />
                     <span>Call Now</span>
                   </a>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/918112236676"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
@@ -444,4 +444,4 @@ export default function ContactPage() {
       </section>
     </div>
   )
-} 
+}

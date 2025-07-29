@@ -274,7 +274,7 @@ export default function TermsConditionsPage() {
                   </p>
                   <div className="space-y-2">
                     <p><strong>Address:</strong> District Court Complex, Gurugram, Haryana 122001, India</p>
-                    <p><strong>Phone:</strong> +91 98765 43210</p>
+                    <p><strong>Phone:</strong> +91 8112236676, +91 9306357991</p>
                     <p><strong>Email:</strong> info@chambersoflv.com</p>
                   </div>
                   <p className="leading-relaxed">
@@ -296,4 +296,4 @@ export default function TermsConditionsPage() {
       </section>
     </div>
   )
-} 
+}

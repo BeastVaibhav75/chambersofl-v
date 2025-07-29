@@ -64,14 +64,14 @@ export default function Navbar() {
           {/* Contact Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+918112236676"
               className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors"
             >
               <Phone size={16} />
               <span className="text-sm font-medium">Call</span>
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918112236676"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"
@@ -115,14 +115,14 @@ export default function Navbar() {
                 <div className="px-4 pt-4 border-t border-gray-200">
                   <div className="flex space-x-4">
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+918112236676"
                       className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors"
                     >
                       <Phone size={16} />
                       <span className="text-sm font-medium">Call</span>
                     </a>
                     <a
-                      href="https://wa.me/919876543210"
+                      href="https://wa.me/918112236676"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"

@@ -104,7 +104,7 @@ Create a `.env.local` file for any environment-specific configurations:
 
 ```env
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_CONTACT_PHONE=+919876543210
+NEXT_PUBLIC_CONTACT_PHONE=+918112236676
 NEXT_PUBLIC_CONTACT_EMAIL=info@chambersoflv.com
 ```
 
@@ -191,4 +191,4 @@ This project is created for Chambers of L&V. All rights reserved.
 
 ---
 
-**Note**: This website is designed to comply with Bar Council of India regulations. The Bar Council of India prohibits advocates from advertising or soliciting work in any form. This website is for informational purposes only and does not constitute legal advice or advertising. 
+**Note**: This website is designed to comply with Bar Council of India regulations. The Bar Council of India prohibits advocates from advertising or soliciting work in any form. This website is for informational purposes only and does not constitute legal advice or advertising.
