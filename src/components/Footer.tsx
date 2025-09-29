@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail, Clock, ExternalLink } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary-900 text-white">
+    <footer className="bg-black text-white">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -17,7 +17,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">L&V</span>
               </div>
               <div>
@@ -70,7 +70,7 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin size={16} className="text-primary-400 mt-1 flex-shrink-0" />
+                <MapPin size={16} className="text-gray-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm">
                     District Court Complex<br />
@@ -81,7 +81,7 @@ export default function Footer() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-primary-400 flex-shrink-0" />
+                <Phone size={16} className="text-gray-400 flex-shrink-0" />
                 <a
                   href="tel:+918112236676"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
@@ -91,17 +91,17 @@ export default function Footer() {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-primary-400 flex-shrink-0" />
+                <Mail size={16} className="text-gray-400 flex-shrink-0" />
                 <a
-                  href="mailto:info@chambersoflv.com"
+                  href="mailto:office@chambersoflv.co.in"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  info@chambersoflv.com
+                  office@chambersoflv.co.in
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Clock size={16} className="text-primary-400 flex-shrink-0" />
+                <Clock size={16} className="text-gray-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
                   Mon - Fri: 9:00 AM - 6:00 PM
                 </p>
@@ -144,7 +144,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="border-t border-gray-700 mt-8 pt-8"
+          className="border-t border-gray-800 mt-8 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">

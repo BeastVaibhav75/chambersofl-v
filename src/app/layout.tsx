@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-white text-gray-900`}>
         <DisclaimerProvider>
           <div className="min-h-screen flex flex-col">
             <Navbar />
@@ -38,4 +38,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

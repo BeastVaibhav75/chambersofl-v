@@ -126,7 +126,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Approach</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle size={20} className="text-primary-600 mt-1 flex-shrink-0" />
+                  <CheckCircle size={20} className="text-gray-800 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Client-Centric</h4>
                     <p className="text-gray-600 text-sm">We prioritize understanding your unique needs and objectives.</p>
@@ -261,7 +261,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="section-padding bg-gradient-to-r from-gray-800 to-black text-white">
         <div className="container-custom">
           <div
             className="text-center mb-16"

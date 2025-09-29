@@ -23,37 +23,37 @@ const services = [
     icon: Scale,
     title: 'Corporate Law',
     description: 'Comprehensive corporate legal services including mergers, acquisitions, and compliance.',
-    color: 'bg-blue-500'
+    color: 'bg-gray-900'
   },
   {
     icon: Users,
     title: 'Consumer Law',
     description: 'Protecting consumer rights and handling consumer disputes effectively.',
-    color: 'bg-green-500'
+    color: 'bg-gray-800'
   },
   {
     icon: Shield,
     title: 'Legal Consulting',
     description: 'Expert legal advice and strategic consulting for businesses and individuals.',
-    color: 'bg-purple-500'
+    color: 'bg-gray-700'
   },
   {
     icon: Briefcase,
     title: 'Labor & Employment',
     description: 'Employment law, workplace disputes, and HR compliance solutions.',
-    color: 'bg-orange-500'
+    color: 'bg-gray-600'
   },
   {
     icon: Globe,
     title: 'Intellectual Property',
     description: 'Trademark registration, patent protection, and IP rights enforcement.',
-    color: 'bg-red-500'
+    color: 'bg-gray-500'
   },
   {
     icon: FileText,
     title: 'Business Law',
     description: 'Contract drafting, business formation, and commercial legal services.',
-    color: 'bg-indigo-500'
+    color: 'bg-gray-400'
   }
 ]
 
@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 to-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container-custom relative z-10 text-center">
           <motion.div
@@ -121,7 +121,7 @@ export default function Home() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               Chambers of{' '}
-              <span className="text-gradient bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+              <span className="font-bold text-white">
                 L&V
               </span>
             </h1>
@@ -134,10 +134,10 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="btn-primary text-lg px-8 py-4">
+              <Link href="/services" className="btn-light-solid text-lg px-8 py-4">
                 Our Services
               </Link>
-              <Link href="/contact" className="btn-secondary text-lg px-8 py-4">
+              <Link href="/contact" className="btn-light-outline text-lg px-8 py-4">
                 Contact Us
               </Link>
             </div>
@@ -193,7 +193,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-4">
                   {service.description}
                 </p>
-                <Link href="/services" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group/link">
+                <Link href="/services" className="inline-flex items-center text-gray-800 hover:text-black font-medium group/link">
                   Learn More
                   <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
@@ -234,7 +234,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-white"
+              className="bg-gradient-to-br from-gray-800 to-black rounded-2xl p-8 text-white"
             >
               <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
               <div className="space-y-4">
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="section-padding bg-gradient-to-r from-gray-800 to-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -331,7 +331,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+918112236676"
-                className="flex items-center space-x-2 bg-white text-primary-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                className="btn-light-solid flex items-center gap-2"
               >
                 <Phone size={20} />
                 <span>Call Now</span>
@@ -340,7 +340,7 @@ export default function Home() {
                 href="https://wa.me/918112236676"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="btn-light-outline flex items-center gap-2"
               >
                 <MessageCircle size={20} />
                 <span>WhatsApp</span>
@@ -406,7 +406,7 @@ export default function Home() {
                   <h3 className="font-semibold text-lg mb-2">Contact</h3>
                   <p className="text-gray-600">
                     Phone: +91 8112236676<br />
-                    Email: info@chambersoflv.com
+                    Email: office@chambersoflv.co.in
                   </p>
                 </div>
               </div>

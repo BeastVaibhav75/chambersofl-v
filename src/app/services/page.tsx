@@ -23,7 +23,7 @@ const services = [
     icon: Scale,
     title: 'Corporate Law',
     description: 'Comprehensive corporate legal services for businesses of all sizes.',
-    color: 'bg-blue-500',
+    color: 'bg-gray-800',
     features: [
       'Mergers & Acquisitions',
       'Corporate Governance',
@@ -38,7 +38,7 @@ const services = [
     icon: Users,
     title: 'Consumer Law',
     description: 'Protecting consumer rights and handling consumer disputes effectively.',
-    color: 'bg-green-500',
+    color: 'bg-gray-800',
     features: [
       'Consumer Rights Protection',
       'Product Liability',
@@ -53,7 +53,7 @@ const services = [
     icon: Shield,
     title: 'Legal Consulting',
     description: 'Expert legal advice and strategic consulting for businesses and individuals.',
-    color: 'bg-purple-500',
+    color: 'bg-gray-800',
     features: [
       'Legal Strategy Development',
       'Risk Assessment',
@@ -68,7 +68,7 @@ const services = [
     icon: Briefcase,
     title: 'Labor & Employment Law',
     description: 'Employment law, workplace disputes, and HR compliance solutions.',
-    color: 'bg-orange-500',
+    color: 'bg-gray-800',
     features: [
       'Employment Contracts',
       'Workplace Disputes',
@@ -83,7 +83,7 @@ const services = [
     icon: Globe,
     title: 'Intellectual Property Law',
     description: 'Trademark registration, patent protection, and IP rights enforcement.',
-    color: 'bg-red-500',
+    color: 'bg-gray-800',
     features: [
       'Trademark Registration',
       'Patent Protection',
@@ -98,7 +98,7 @@ const services = [
     icon: FileText,
     title: 'Business Law',
     description: 'Contract drafting, business formation, and commercial legal services.',
-    color: 'bg-indigo-500',
+    color: 'bg-gray-800',
     features: [
       'Contract Drafting',
       'Business Formation',
@@ -113,7 +113,7 @@ const services = [
     icon: Building,
     title: 'Real Estate Law',
     description: 'Property transactions, development projects, and real estate disputes.',
-    color: 'bg-teal-500',
+    color: 'bg-gray-700',
     features: [
       'Property Transactions',
       'Development Projects',
@@ -128,7 +128,7 @@ const services = [
     icon: Gavel,
     title: 'Criminal Defense Law',
     description: 'Criminal defense, white-collar crime, and legal representation.',
-    color: 'bg-gray-600',
+    color: 'bg-gray-800',
     features: [
       'Criminal Defense',
       'White-Collar Crime',
@@ -143,7 +143,7 @@ const services = [
     icon: Lock,
     title: 'IT Law',
     description: 'Technology law, data protection, and cybersecurity legal services.',
-    color: 'bg-cyan-500',
+    color: 'bg-gray-800',
     features: [
       'Data Protection',
       'Cybersecurity Law',
@@ -158,7 +158,7 @@ const services = [
     icon: Zap,
     title: 'Trademark Law',
     description: 'Trademark registration, protection, and enforcement services.',
-    color: 'bg-yellow-500',
+    color: 'bg-gray-800',
     features: [
       'Trademark Registration',
       'Brand Protection',
@@ -263,13 +263,13 @@ export default function ServicesPage() {
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle size={14} className="text-primary-600 mr-2 flex-shrink-0" />
+                        <CheckCircle size={14} className="text-gray-800 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Link href="/contact" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group/link">
+                <Link href="/contact" className="inline-flex items-center text-gray-800 hover:text-black font-medium group/link">
                   Learn More
                   <ArrowRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
@@ -322,7 +322,7 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-700">
-                        <CheckCircle size={16} className="text-primary-600 mr-2 flex-shrink-0" />
+                        <CheckCircle size={16} className="text-gray-800 mr-2 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
@@ -335,7 +335,7 @@ export default function ServicesPage() {
                   </h4>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle size={16} className="text-primary-600 mr-3 mt-1 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-gray-800 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-600">Expert legal professionals with specialized knowledge</span>
                     </li>
                     <li className="flex items-start">
@@ -407,7 +407,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-xl">{process.step}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -423,7 +423,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="section-padding bg-gradient-to-r from-gray-800 to-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -438,10 +438,10 @@ export default function ServicesPage() {
               Contact us today to discuss your legal needs and how we can help you achieve your objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-50">
+              <Link href="/contact" className="btn-light-solid">
                 Contact Us
               </Link>
-              <Link href="/team" className="btn-secondary border-white text-white hover:bg-white hover:text-primary-600">
+              <Link href="/team" className="btn-light-outline">
                 Meet Our Team
               </Link>
             </div>
@@ -450,4 +450,4 @@ export default function ServicesPage() {
       </section>
     </div>
   )
-} 
+}

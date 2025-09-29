@@ -58,28 +58,28 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    setSubmitStatus('idle')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       })
-      
-      // Reset status after 5 seconds
+      if (!res.ok) throw new Error('Request failed')
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
       setTimeout(() => setSubmitStatus('idle'), 5000)
-    }, 2000)
+    } catch (err) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section ref={heroRef} className="relative py-20 bg-gradient-to-br from-gray-800 to-black text-white">
         <div className="container-custom">
           <div
             className="text-center"
@@ -236,11 +236,18 @@ export default function ContactPage() {
 
                 {submitStatus === 'error' && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <div className="flex items-center">
-                      <AlertCircle size={20} className="text-red-600 mr-3 flex-shrink-0" />
-                      <p className="text-red-800 font-medium">
-                        There was an error sending your message. Please try again or contact us directly.
-                      </p>
+                    <div className="flex items-start">
+                      <AlertCircle size={20} className="text-red-600 mr-3 flex-shrink-0 mt-0.5" />
+                      <div className="text-red-800">
+                        <p className="font-medium mb-1">We couldn't send your message right now.</p>
+                        <p className="text-sm">
+                          Please email us directly at{' '}
+                          <a href="mailto:office@chambersoflv.co.in" className="underline">
+                            office@chambersoflv.co.in
+                          </a>
+                          , or try again later.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -315,10 +322,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
                     <a
-                      href="mailto:info@chambersoflv.com"
+                      href="mailto:office@chambersoflv.co.in"
                       className="text-gray-600 hover:text-primary-600 transition-colors"
                     >
-                      info@chambersoflv.com
+                      office@chambersoflv.co.in
                     </a>
                   </div>
                 </div>
@@ -344,7 +351,7 @@ export default function ContactPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="tel:+918112236676"
-                    className="flex items-center justify-center space-x-2 bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors"
+                    className="flex items-center justify-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
                   >
                     <Phone size={20} />
                     <span>Call Now</span>

@@ -8,7 +8,7 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
 const faqs = [
   {
     question: "How do I schedule a consultation with Chambers of L&V?",
-    answer: "You can schedule a consultation by calling us directly at +91 98765 43210, sending us an email at info@chambersoflv.com, or filling out the contact form on our website. We'll get back to you within 24 hours to arrange a meeting."
+    answer: "You can schedule a consultation by calling us directly at +91 98765 43210, sending us an email at office@chambersoflv.co.in, or filling out the contact form on our website. We'll get back to you within 24 hours to arrange a meeting."
   },
   {
     question: "What information should I bring to my first meeting?",
@@ -68,7 +68,7 @@ export default function FAQsPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative py-20 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section ref={heroRef} className="relative py-20 bg-gradient-to-br from-gray-800 to-black text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -188,7 +188,7 @@ export default function FAQsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="section-padding bg-gradient-to-r from-gray-800 to-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -205,13 +205,13 @@ export default function FAQsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="btn-primary bg-white text-primary-600 hover:bg-gray-50"
+                className="btn-light-solid"
               >
                 Contact Us
               </a>
               <a
                 href="/services"
-                className="btn-secondary border-white text-white hover:bg-white hover:text-primary-600"
+                className="btn-light-outline"
               >
                 Our Services
               </a>

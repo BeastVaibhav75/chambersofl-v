@@ -31,20 +31,20 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-white'
+          ? 'bg-black/95 backdrop-blur-md shadow-lg' 
+          : 'bg-black'
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">L&V</span>
+            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+              <span className="text-black font-bold text-lg">L&V</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Chambers of L&V</h1>
-              <p className="text-xs text-gray-500">Corporate & Commercial Law</p>
+              <h1 className="text-xl font-bold text-white">Chambers of L&V</h1>
+              <p className="text-xs text-gray-400">Corporate & Commercial Law</p>
             </div>
           </Link>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-white hover:text-gray-300 font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+918112236676"
-              className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors"
+              className="btn-light-solid flex items-center gap-2 py-2 px-4"
             >
               <Phone size={16} />
               <span className="text-sm font-medium">Call</span>
@@ -74,7 +74,7 @@ export default function Navbar() {
               href="https://wa.me/918112236676"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"
+              className="btn-light-outline flex items-center gap-2 py-2 px-4"
             >
               <MessageCircle size={16} />
               <span className="text-sm font-medium">WhatsApp</span>
@@ -84,7 +84,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-800 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,7 +97,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-gray-200"
+              className="lg:hidden border-t border-gray-800"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
@@ -105,18 +105,18 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors"
+                    className="block px-4 py-2 text-white hover:text-gray-300 hover:bg-gray-800 rounded-md transition-colors"
                   >
                     {item.name}
                   </Link>
                 ))}
                 
                 {/* Mobile Contact Buttons */}
-                <div className="px-4 pt-4 border-t border-gray-200">
+                <div className="px-4 pt-4 border-t border-gray-800">
                   <div className="flex space-x-4">
                     <a
                       href="tel:+918112236676"
-                      className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors"
+                      className="btn-light-solid flex items-center gap-2 py-2 px-4"
                     >
                       <Phone size={16} />
                       <span className="text-sm font-medium">Call</span>
@@ -125,7 +125,7 @@ export default function Navbar() {
                       href="https://wa.me/918112236676"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"
+                      className="btn-light-outline flex items-center gap-2 py-2 px-4"
                     >
                       <MessageCircle size={16} />
                       <span className="text-sm font-medium">WhatsApp</span>

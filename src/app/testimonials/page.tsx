@@ -139,7 +139,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="section-padding bg-gradient-to-r from-gray-800 to-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -156,13 +156,13 @@ export default function TestimonialsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="btn-primary bg-white text-primary-600 hover:bg-gray-50"
+                className="btn-light-solid"
               >
                 Contact Us
               </a>
               <a
                 href="/services"
-                className="btn-secondary border-white text-white hover:bg-white hover:text-primary-600"
+                className="btn-light-outline"
               >
                 Our Services
               </a>
@@ -172,4 +172,4 @@ export default function TestimonialsPage() {
       </section>
     </div>
   )
-} 
+}

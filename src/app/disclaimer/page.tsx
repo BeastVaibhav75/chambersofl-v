@@ -198,7 +198,7 @@ export default function DisclaimerPage() {
                   <div className="space-y-2">
                     <p><strong>Address:</strong> District Court Complex, Gurugram, Haryana 122001, India</p>
                     <p><strong>Phone:</strong> +91 8112236676, +91 9306357991</p>
-                    <p><strong>Email:</strong> info@chambersoflv.com</p>
+                    <p><strong>Email:</strong> office@chambersoflv.co.in</p>
                   </div>
                   <p className="leading-relaxed">
                     We are committed to providing professional legal services while adhering to all applicable laws and ethical guidelines.
