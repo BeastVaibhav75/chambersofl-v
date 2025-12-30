@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, email, phone, subject, message } = body || {}
 
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !phone || !subject || !message) {
       return new Response(JSON.stringify({ error: 'Missing required fields' }), { status: 400 })
     }
 
@@ -50,6 +50,9 @@ export async function POST(request: NextRequest) {
     return new Response(JSON.stringify({ error: 'Failed to send message' }), { status: 500 })
   }
 }
+
+
+
 
 
 

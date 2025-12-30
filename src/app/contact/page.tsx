@@ -1,5 +1,6 @@
 'use client'
 
+import type React from 'react'
 import { useState, useEffect, useRef } from 'react'
 
 import { 
@@ -151,7 +152,7 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
@@ -159,6 +160,7 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                       placeholder="Enter your phone number"
                     />
@@ -213,11 +215,22 @@ export default function ContactPage() {
                     <AlertCircle size={20} className="text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
                     <div className="text-sm text-yellow-800">
                       <p className="font-medium mb-1">Important Notice:</p>
-                      <p>
+                      <p className="mb-3">
                         The Bar Council of India prohibits advocates from advertising or soliciting work in any form. 
                         By submitting this form, you acknowledge that you are seeking information voluntarily. 
                         Nothing on this site constitutes legal advice or advertising.
                       </p>
+                      <div className="flex items-start space-x-2">
+                        <input
+                          id="noticeConsent"
+                          type="checkbox"
+                          required
+                          className="mt-1 h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                        />
+                        <label htmlFor="noticeConsent" className="text-xs text-yellow-900">
+                          I have read and understood the above important notice and I am contacting Chambers of LV on my own accord.
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -389,13 +402,16 @@ export default function ContactPage() {
           <div
             className="bg-white rounded-xl shadow-lg overflow-hidden"
           >
-            <div className="h-96 bg-gray-200 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin size={64} className="mx-auto mb-4" />
-                <p className="text-xl font-semibold mb-2">Google Maps Integration</p>
-                <p className="text-sm">District Court Complex, Gurugram</p>
-                <p className="text-xs mt-2">Interactive map showing our office location</p>
-              </div>
+            <div className="h-96 bg-gray-200">
+              <iframe
+                title="Chambers of LV Location"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3507.989032574297!2d77.031182!3d28.449747!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1767083323728!5m2!1sen!2sin"
+                className="w-full h-full border-0"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

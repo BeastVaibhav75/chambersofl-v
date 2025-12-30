@@ -417,13 +417,17 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gray-200 rounded-lg h-64 flex items-center justify-center"
+              className="bg-gray-200 rounded-lg h-64 md:h-80 lg:h-96 overflow-hidden"
             >
-              <div className="text-center text-gray-500">
-                <MapPin size={48} className="mx-auto mb-4" />
-                <p>Google Maps Embed</p>
-                <p className="text-sm">District Court, Gurugram</p>
-              </div>
+              <iframe
+                title="Chambers of LV Location - Home"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3507.989032574297!2d77.031182!3d28.449747!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1767083323728!5m2!1sen!2sin"
+                className="w-full h-full border-0"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </motion.div>
           </div>
         </div>
