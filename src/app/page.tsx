@@ -9,7 +9,6 @@ import {
   Briefcase, 
   Globe, 
   FileText,
-  Star,
   ArrowRight,
   Phone,
   MessageCircle,
@@ -57,35 +56,12 @@ const services = [
   }
 ]
 
-const testimonials = [
-  {
-    name: 'Rajesh Kumar',
-    role: 'CEO, TechStart India',
-    content: 'Chambers of L&V provided exceptional legal guidance during our startup phase. Their expertise in corporate law helped us navigate complex regulations.',
-    rating: 5
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Business Owner',
-    content: 'Professional, knowledgeable, and reliable. The team at Chambers of L&V helped us resolve a complex trademark dispute efficiently.',
-    rating: 5
-  },
-  {
-    name: 'Amit Patel',
-    role: 'Corporate Executive',
-    content: 'Outstanding legal services with a deep understanding of business needs. Highly recommended for corporate legal matters.',
-    rating: 5
-  }
-]
-
 export default function Home() {
   const [heroInView, setHeroInView] = useState(false)
   const [servicesInView, setServicesInView] = useState(false)
-  const [testimonialsInView, setTestimonialsInView] = useState(false)
   
   const heroRef = useRef<HTMLElement>(null)
   const servicesRef = useRef<HTMLElement>(null)
-  const testimonialsRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -94,7 +70,6 @@ export default function Home() {
           if (entry.isIntersecting) {
             if (entry.target === heroRef.current) setHeroInView(true)
             if (entry.target === servicesRef.current) setServicesInView(true)
-            if (entry.target === testimonialsRef.current) setTestimonialsInView(true)
           }
         })
       },
@@ -103,7 +78,6 @@ export default function Home() {
 
     if (heroRef.current) observer.observe(heroRef.current)
     if (servicesRef.current) observer.observe(servicesRef.current)
-    if (testimonialsRef.current) observer.observe(testimonialsRef.current)
 
     return () => observer.disconnect()
   }, [])
@@ -264,50 +238,6 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section ref={testimonialsRef} className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={testimonialsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We are committed to providing exceptional legal services and building lasting relationships with our clients
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={testimonialsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6 italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
